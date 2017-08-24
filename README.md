@@ -2,11 +2,13 @@
 
 **FoxBarcodeQR** is a application free software and offers a barcode tool for the Visual FoxPro Community. This is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes.
 
-**FoxBarcodeQR** use the free library **BarCodeLibrary.DLL** of ***Dario Alvarez Aranda (Mexico)***
+**FoxBarcodeQR** use the free library **BarCodeLibrary.DLL** of ***Dario Alvarez Aranda** (Mexico)*
 
 This class is an alternative solution for all developers who requested QR Code support until **FoxBarcode** natively support the QR Code with **gpImage2** class.
 
-***Project Manager:** Guillermo Carrero (RIP) (Barcelona, Spain) and Luis Maria Guayan (Tucuman, Argentina)*
+**Project Manager:** ***Guillermo Carrero** (RIP) (Barcelona, Spain) and **Luis Maria Guayan** (Tucuman, Argentina)*
+
+## Download
 
 ![](images/vfpxreleasesmall.png) **[Download the latest release of FoxBarcodeQR](FoxBarcodeQR_v_1_17.zip)** - v.1.17 - Release 2016.12.21
 
@@ -82,8 +84,8 @@ The only files needed to be distributed to FoxBarcodeQR function properly are:
  
 **Notes on the distribution and installation of BarCodeLibrary.dll file:**
 
-  * BarCodeLibrary.dll file not register. It must be in the same folder as the application or in the Windows System folder.
-  * BarCodeLibrary.dll was tested and runs on Windows XP, 7, 8 and 10 (32 and 64 bits)
+  * **BarCodeLibrary.dll** file not register. It must be in the same folder as the application or in the Windows System folder.
+  * **BarCodeLibrary.dll** was tested and runs on Windows XP, 7, 8 and 10 (32 and 64 bits)
 
 ## What's New?
 
