@@ -83,7 +83,7 @@ The only files needed to be distributed to FoxBarcodeQR function properly are:
 **Notes on the distribution and installation of BarCodeLibrary.dll file:**
 
   * BarCodeLibrary.dll file not register. It must be in the same folder as the application or in the Windows System folder.
-  * BarCodeLibrary.dll was tested and runs on Windows XP, 7 and 8 (32 and 64 bits)
+  * BarCodeLibrary.dll was tested and runs on Windows XP, 7, 8 and 10 (32 and 64 bits)
 
 ## What's New?
 
