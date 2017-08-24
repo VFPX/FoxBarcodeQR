@@ -4,7 +4,7 @@
 
 **FoxBarcodeQR** use the free library **BarCodeLibrary.DLL** of ***Dario Alvarez Aranda** (Mexico)*
 
-This class is an alternative solution for all developers who requested QR Code support until **FoxBarcode** natively support the QR Code with **gpImage2** class.
+This class is an alternative solution for all developers who requested QR Code support.
 
 **Project Manager:** ***Guillermo Carrero** (RIP) (Barcelona, Spain) and **Luis Maria Guayan** (Tucuman, Argentina)*
 
@@ -89,16 +89,16 @@ The only files needed to be distributed to FoxBarcodeQR function properly are:
 
 ## What's New?
 
-v.1.17 - Release 2016.12.21
+**v.1.17 - Release 2016.12.21**
 * Version number matched to FoxBarcode an New Year !
 * Fixed some minor bugs
 
-v.1.11 - Release 2013.08.24
+**v.1.11 - Release 2013.08.24**
 * New property lDeleteTempFiles: Lets choose if delete or not the temporary folder and image files
 * Version number matched to FoxBarcode
 * Fixed some minor bugs
 
-v.1.00 - Release 2013.02.16
+**v.1.00 - Release 2013.02.16**
 * Barcode Symbologies: QR code
 * Image types: BMP, JPG and PNG
 * External DLL library: BarCodeLibrary.dll
