@@ -1,6 +1,6 @@
 # FoxBarcodeQR ![](images/FBC_QR_00.png)
 
-**FoxBarcodeQR** is a application free software and offers a barcode tool for the Visual FoxPro Community. This is a supplement of **[FoxBarcode]**(https://github.com/VFPX/FoxBarCode) class only for QR Code barcodes.
+**FoxBarcodeQR** is a application free software and offers a barcode tool for the Visual FoxPro Community. This is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes.
 
 **FoxBarcodeQR** use the free library **BarCodeLibrary.DLL** of ***Dario Alvarez Aranda (Mexico)***
 
@@ -8,7 +8,7 @@ This class is an alternative solution for all developers who requested QR Code s
 
 ***Project Manager:** Guillermo Carrero (RIP) (Barcelona, Spain) and Luis Maria Guayan (Tucuman, Argentina)*
 
-![](images/vfpxreleasesmall.png) **[Download the latest release of FoxBarcodeQR]**(FoxBarcodeQR_v_1_17.zip) - v.1.17 - Release 2016.12.21
+![](images/vfpxreleasesmall.png) **[Download the latest release of FoxBarcodeQR](FoxBarcodeQR_v_1_17.zip)** - v.1.17 - Release 2016.12.21
 
 ## Features
 
@@ -24,7 +24,7 @@ The **BarCodeLibrary.DLL** library, only have three functions to declare:
 
 ## Methods
 
-**FoxBarcodeQR** encapsulates **BarCodeLibrary.dll** library functions into a single method called ***QRBarcodeImage()***, which receives the following parameters:
+**FoxBarcodeQR** encapsulates **BarCodeLibrary.dll** library functions into a single method called **QRBarcodeImage()**, which receives the following parameters:
 
 * **tcText:** Text to encode
 * **tcFile:** Name the image file to generate. If none is specified, it generates a random file name in the Windows temporary files folder.
@@ -61,11 +61,11 @@ lcQRImage = loFbc.QRBarcodeImage("https://github.com/VFPX/FoxBarCodeQR",,6,2)</p
 
 ![](images/FBC_QR_01.png)
 
-To include a barcode on a report, you must insert an Image object and set the property with a call ControlSource QRBarcodeImage() method and is recommended to set "contents Scale, Retain shape" if the image size differs from the frame.
+To include a barcode on a report, you must insert an Image object and set the property with a call ControlSource **QRBarcodeImage()** method and is recommended to set "contents Scale, Retain shape" if the image size differs from the frame.
 
 ![](images/FBC_QR_02.png)
 
-**Important:** Before you run the report and create the object FoxBarcode, you must declare the variable as PRIVATE so that it has scope in the report, as follows:
+**Important:** Before you run the report and create the object FoxBarcode, you must declare the variable as **PRIVATE** so that it has scope in the report, as follows:
 
 <pre>*--- Create FoxBarcodeQR private object
 PRIVATE poFbc
@@ -83,7 +83,6 @@ The only files needed to be distributed to FoxBarcodeQR function properly are:
 **Notes on the distribution and installation of BarCodeLibrary.dll file:**
 
   * BarCodeLibrary.dll file not register. It must be in the same folder as the application or in the Windows System folder.
-
   * BarCodeLibrary.dll was tested and runs on Windows XP, 7 and 8 (32 and 64 bits)
 
 ## What's New?
@@ -101,7 +100,6 @@ v.1.00 - Release 2013.02.16
 * Barcode Symbologies: QR code
 * Image types: BMP, JPG and PNG
 * External DLL library: BarCodeLibrary.dll
-
 
 ## Acknowledgements
 
