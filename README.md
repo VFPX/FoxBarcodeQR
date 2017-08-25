@@ -1,22 +1,22 @@
 # FoxBarcodeQR ![](images/FBC_QR_00.png)
 
-**FoxBarcodeQR** is a application free software and offers a barcode tool for the Visual FoxPro Community. This is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes.
+**FoxBarcodeQR** is a application free software and offers a barcode tool for the Visual FoxPro Community. This is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes. This class is an alternative solution for all developers who requested QR Code support.
 
 **FoxBarcodeQR** use the free library **BarCodeLibrary.DLL** of ***Dario Alvarez Aranda** (Mexico)*
 
-This class is an alternative solution for all developers who requested QR Code support.
+### Project Manager:
 
-**Project Manager:** ***Guillermo Carrero** (RIP) (Barcelona, Spain) and **Luis Maria Guayan** (Tucuman, Argentina)*
+***Guillermo Carrero** (RIP) (Barcelona, Spain) and **Luis Maria Guayan** (Tucuman, Argentina)*
 
-## Download
+### Latest release
 
-![](images/vfpxreleasesmall.png) **[Download the latest release of FoxBarcodeQR](FoxBarcodeQR_v_1_17.zip)** - v.1.17 - Release 2016.12.21
+**[FoxBarcodeQR_v_1_17](/FoxBarcodeQR_v_1_17/)** - v.1.17 - Release 2016.12.21
 
-## Features
+### Features
 
 The **BarCodeLibrary.DLL** library generates functionals QR Codes, but you can only set the type and size of the generated image. No settings supports for error correction level.
 
-## The external library
+### The external library
 
 The **BarCodeLibrary.DLL** library, only have three functions to declare:
 
@@ -24,7 +24,7 @@ The **BarCodeLibrary.DLL** library, only have three functions to declare:
 * ![](images/meth.gif) **SetConfiguration:** A method to set the size and type of image file to generate.
 * ![](images/meth.gif) **GenerateFile:** This method is responsible for generating the image of the QR Code.
 
-## Methods
+### Methods
 
 **FoxBarcodeQR** encapsulates **BarCodeLibrary.dll** library functions into a single method called **QRBarcodeImage()**, which receives the following parameters:
 
@@ -50,7 +50,7 @@ The **BarCodeLibrary.DLL** library, only have three functions to declare:
 
 And returns the file path of the bar code image generated.
 
-## Examples
+### Examples
 
 The following example creates a image of a QR Code barcode from a size 6 (198 x 198 pixels) and PNG type.
 
@@ -75,19 +75,24 @@ m.poFbc = CREATEOBJECT("FoxBarcodeQR")
 ...
 REPORT FORM FoxBarcodeQR PREVIEW</pre>
 
-## Distribution
+### Distribution
 
 The only files needed to be distributed to FoxBarcodeQR function properly are:
 
 * ![](images/prg.gif) FoxBarcodeQR.prg
 * ![](images/prg.gif) BarCodeLibrary.dll
  
-**Notes on the distribution and installation of BarCodeLibrary.dll file:**
+Notes on the distribution, installation and limitation of BarCodeLibrary.dll file:
 
   * **BarCodeLibrary.dll** file not register. It must be in the same folder as the application or in the Windows System folder.
   * **BarCodeLibrary.dll** was tested and runs on Windows XP, 7, 8 and 10 (32 and 64 bits)
+  * **BarCodeLibrary.dll** has the limitation of encoding only up to 255 characters, so **FoxBarcodeQR** also has this limitation.
 
-## What's New?
+### Acknowledgements
+
+To my friend **Guillermo** from heaven illuminated me with this supplement to our class **FoxBarcode**.
+
+### What's New?
 
 **v.1.17 - Release 2016.12.21**
 * Version number matched to FoxBarcode an New Year !
@@ -103,6 +108,3 @@ The only files needed to be distributed to FoxBarcodeQR function properly are:
 * Image types: BMP, JPG and PNG
 * External DLL library: BarCodeLibrary.dll
 
-## Acknowledgements
-
-To my friend **Guillermo** from heaven illuminated me with this supplement to our class **FoxBarcode**.
