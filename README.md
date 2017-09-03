@@ -1,6 +1,6 @@
 # FoxBarcodeQR ![](images/FBC_QR_00.png)
 
-**FoxBarcodeQR** is a application free software and offers a barcode tool for the Visual FoxPro Community. This is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes. This class is an alternative solution for all developers who requested QR Code support.
+**FoxBarcodeQR** is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes. This class is an alternative solution for all developers who requested QR Code support.
 
 **FoxBarcodeQR** use the free library **BarCodeLibrary.DLL** of ***Dario Alvarez Aranda** (Mexico)*
 
