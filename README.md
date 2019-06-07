@@ -46,7 +46,7 @@ The **BarCodeLibrary.DLL** library, only have three functions to declare:
 * **tnType:** The type of the generated image file. Receives an integer between 0 and 2.
   * 0 = BMP
   * 1 = JPG
-  * 2 = GIP
+  * 2 = PNG
 
 And returns the file path of the bar code image generated.
 
