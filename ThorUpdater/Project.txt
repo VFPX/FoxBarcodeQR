@@ -1,0 +1,5 @@
+appName = FoxBarcodeQR
+appID = FoxBarcodeQR
+majorVersion = 2.00
+excludeFiles = *.bak,*.bat,*.fxp,DisplayItemCount.*,projectexplorercategories.*,projectexplorertags.*,README.md,.gitignore
+excludeFolders = *Docs*,*FoxBin2PRG*,*ThorUpdater*
