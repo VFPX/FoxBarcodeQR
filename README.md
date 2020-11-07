@@ -86,16 +86,16 @@ The following properties are used to configure the other options:
 * **lAutoFit:** Works in conjunction with lAutoConfigurate
 * **nBackColor:** Color of the QR code background
 * **nBarColor:** Color of the QR code bars
-* **nCorrectionLevel: Error correction level:
+* **nCorrectionLevel:** Error correction level:
   * 0 = Level L (7%)
   * 1 = Level M (15%)
   * 2 = Level Q (25%)
   * 3 = Level H (30%)
 * **nEncoding:** Encoding algorithm:
   * 0 = Alphabetic: Encodes alphanumeric characters (digits 0-9; uppercase A-Z; other nine characters: Space $% * + -. /:)
-  * 1 = Byte = 1: Encode binary values ​​(8-bit data)
-  * 2 = Numeric: Encodes only numeric values ​​(digits 0-9)
-  * 3 = Kanji: Encodes Kanji characters. Kanji characters in QR Code can have values ​​8140-9FFC and E040-EBBF
+  * 1 = Byte = 1: Encode binary values (8-bit data)
+  * 2 = Numeric: Encodes only numeric values (digits 0-9)
+  * 3 = Kanji: Encodes Kanji characters. Kanji characters in QR Code can have values 8140-9FFC and E040-EBBF
   * 4 = Auto: Automatic selection of the encoding algorithm. (Recommended)
 * **nMarginPixels:** Margin in pixels
 * **nModuleWidth:** Size of modules in pixels
@@ -134,7 +134,6 @@ As of this new version 2.00 of **FoxBarcodeQR**, strings of characters greater t
 *--- Create a FoxBarcodeQR object
 LOCAL loFbc, lcQRImage
 loFbc = CREATEOBJECT("FoxBarcodeQR")
-
 
 *-- Using the QRCodeLib.dll library (Visit: www.validacfd.com)
 lcString = "+ .0010. -"
@@ -186,16 +185,16 @@ To [www.validacfd.com](http://www.validacfd.com) for your library QRCodeLib.dll.
 * Now supports encoding of more than 255 characters.
 * Now supports set the background color and color of the bar.
 Now supports setting the level of error correction recovery:
-  * .Level L (Low): 7% of codewords can be restored.
-  * .Level M (Medium): 15% of codewords can be restored.
-  * .Level Q (Quartile): 25% of codewords can be restored.
-  * .Level H (High): 30% of codewords can be restored.
+  * Level L (Low): 7% of codewords can be restored.
+  * Level M (Medium): 15% of codewords can be restored.
+  * Level Q (Quartile): 25% of codewords can be restored.
+  * Level H (High): 30% of codewords can be restored.
 * Now supports the selection of the coding algorithm:
-  * .Numeric: encodes numeric values only (digits 0-9) 
-  * .Alphanumeric: encodes alphanumeric characters (digits 0-9; upper case letters A-Z; nine other characters: Space $ % * + – . / : ) 
-  * .Binary/byte: encodes binary values (8-bit data) 
-  * .Kanji/kana: encodes Kanji characters. Kanji characters in QR Code can have values 8140-9FFC and E040-EBBF
-  * .Auto: automatic seleccion of the encoding algorithm
+  * Numeric: encodes numeric values only (digits 0-9) 
+  * Alphanumeric: encodes alphanumeric characters (digits 0-9; upper case letters A-Z; nine other characters: Space $ % * + – . / : ) 
+  * Binary/byte: encodes binary values (8-bit data) 
+  * Kanji/kana: encodes Kanji characters. Kanji characters in QR Code can have values 8140-9FFC and E040-EBBF
+  * Auto: automatic seleccion of the encoding algorithm
 * Only support BMP image type
 
 **v.1.17 - Release 2016.12.21**
