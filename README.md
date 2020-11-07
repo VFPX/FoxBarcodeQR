@@ -174,7 +174,7 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 ### Acknowledgements
 
 * To my friend **Guillermo** who enlightens me from heaven to make this complement for our **FoxBarcode** class.
-*To [www.validacfd.com](http://www.validacfd.com) for your library QRCodeLib.dll.
+* To [www.validacfd.com](http://www.validacfd.com) for your library QRCodeLib.dll.
 
 
 
