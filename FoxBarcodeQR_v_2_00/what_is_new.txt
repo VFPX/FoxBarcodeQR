@@ -1,21 +1,21 @@
 What's New?
 
-v.2.0 - Release 2020.11.07
+v.2.00 - Release 2020.11.07
 Change external DLL library QRCodeLib.dll (visit: www.validacfd.com)
 Now supports encoding of more than 255 characters.
-Now supports set the background color and color of the code.
-Now supports four levels of error correction recovery:
+Now supports set the background color and color of the bar.
+Now supports setting the level of error correction recovery:
 .Level L (Low): 7% of codewords can be restored.
 .Level M (Medium): 15% of codewords can be restored.
 .Level Q (Quartile): 25% of codewords can be restored.
 .Level H (High): 30% of codewords can be restored.
 Now supports the selection of the coding algorithm:
 .Numeric: encodes numeric values only (digits 0-9) 
-.Alphanumeric: encodes alphanumeric characters (digits 0 - 9; upper case letters A -Z; other characters: space, $ % * + - . / : ); ) 
+.Alphanumeric: encodes alphanumeric characters (digits 0-9; upper case letters A-Z; nine other characters: Space $ % * + – . / : ) 
 .Binary/byte: encodes binary values (8-bit data) 
-.Kanji/kana: encodes Kanji characters. Kanji characters in QR Code can have values 8140 -9FFC and E040 - EBBF
+.Kanji/kana: encodes Kanji characters. Kanji characters in QR Code can have values 8140-9FFC and E040-EBBF
 .Auto: automatic seleccion of the encoding algorithm
-Only image type BMP
+Only support BMP image type
 
 
 v.1.17 - Release 2016.12.21
