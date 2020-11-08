@@ -32,7 +32,7 @@ The BarCodeLibrary.dll library contains only 3 functions:
 * ![](images/meth.gif) **SetConfiguration:** A method to set the size and type of image file to generate.
 * ![](images/meth.gif) **GenerateFile:** This method is responsible for generating the image of the QR Code.
 
-**QRCodeLib.dll *(recommended)** (Visit: [www.validacfd.com](http://www.validacfd.com))*
+**QRCodeLib.dll** *(recommended) (Visit: [www.validacfd.com](http://www.validacfd.com))*
 
 * Generate functional QR codes with greater configuration control.
 * Supports strings of more than 255 characters.
