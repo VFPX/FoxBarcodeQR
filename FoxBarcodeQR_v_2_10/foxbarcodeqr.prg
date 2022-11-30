@@ -376,6 +376,44 @@ DEFINE CLASS FoxBarcodeQR AS CUSTOM
       "Line: " + TRANSFORM(m.nLine)
     MESSAGEBOX(m.lcErrMsg, 0 + 16, "FoxBarcodeQR error")
   ENDPROC
+  
+  *---------------------------------------------------------
+  * Function CalculateLogoSize(nQrSize)
+  *---------------------------------------------------------
+  * Params:
+  * nQrSize = size of the side length (in pixels)
+  * Returns the optimal size of logo which we can add
+  *---------------------------------------------------------
+  FUNCTION CalculateLogoSize
+  	LPARAMETERS nQrSize
+	  IF TYPE("nQrSize") <> 'N'
+	  	RETURN
+	  ENDIF
+	  LOCAL lnLogoSize, lnImageRatio
+	  lnImageRatio = 2.75
+	  lnLogoSize = ROUND(nQrSize / lnImageRatio, 0) 
+	  RETURN lnLogoSize
+  ENDFUNC
+  
+  *---------------------------------------------------------
+  * Function SetLogoPosition(nQrSize)
+  *---------------------------------------------------------
+  * Params:
+  * nQrSize = size of the side length (in pixels)
+  * nLogoSize = calculated size of logo (output from CalculateLogoSize)
+  * Returns the begin position of drawing logo
+  *---------------------------------------------------------
+  FUNCTION SetLogoPosition
+  	LPARAMETERS nQrSize, nLogoSize
+  	IF TYPE("nQrSize") <> 'N'
+    	RETURN
+	ENDIF
+	
+	LOCAL lnCentralPosition, lnPixelDrawPosition
+	lnCentralPosition = nQrSize / 2
+	lnPixelDrawPosition = ROUND(lnCentralPosition - (nLogoSize / 2),0)
+	RETURN lnPixelDrawPosition	  
+  ENDFUNC
 
 ENDDEFINE && FoxBarcodeQR
 
