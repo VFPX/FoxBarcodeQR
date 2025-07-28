@@ -45,10 +45,14 @@ The BarCodeLib.dll library (version 0.1b) (Visit: [www.validacfd.com](http://www
 * ![](images/meth.gif) **FastQRCode:** Generates the image of the QR Code with the text to be encoded.
 * ![](images/meth.gif) **FullQRCode:** Same as the previous method, but with greater control in the generation of the QR Code image.
 
-**Google API** *(requires an internet connection)*
+**Google API** *(Discontinued)*
 
 * Generates QR codes through a POST call to a URL, so it requires an internet connection
 * Supports strings of more than 255 characters.
+
+**QR Server API** *Coming soon*
+
+*This API replaces the discontinued Google API.
 
 ### FoxBarcodeQR class methods
 
@@ -129,6 +133,12 @@ This API allows us to adjust some other properties such as:
   * 3 = Level H (30%)
 * **nMarginPixels:** Margin in columns
 
+**SvrQRCodeImage()** *Coming soon*
+* **tcText:** Text to encode
+* **tcFile:** Name of the image file you want to generate. If none is specified, a random file name is generated in the Windows temporary files folder.
+* **tnSize:** The width and height in pixels of the generated image
+* **tnType:** Possible values: png, gif, jpeg, jpg, svg, eps
+
 All these methods return the path and file name of the image generated with the QR Code.
 
 ### Examples
@@ -208,6 +218,19 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 
 ### What's New?
 
+**v.2.25 - Release soon**
+* Use QR Server API (requires internet connection)
+* This API replaces the discontinued Google API.
+* This new API support:
+  * Encoding of more than 255 characters.
+  * Level of error correction recovery.
+  * Image type: png, gif, jpeg, jpg, vector graphics svg and eps 
+  * For more complete and detailed information, read the documentation for this API library at: [goqr.me/api/doc/create-qr-code/](https://goqr.me/api/doc/create-qr-code/)
+    
+**v.2.21 - Release 2021.01.04**
+* Updated version QRCodeLib.dll v.1.2.130915 Demo (visit: www.validacfd.com)
+* Now supports setting the version of QR Code (1..40)
+  
 **v.2.10 - Release 2021.02.27**
 * Use Google API (requires internet connection)
 * This API only support PNG image type
@@ -216,7 +239,7 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 * Change external dll library QRCodeLib.dll (Visit: [www.validacfd.com](http://www.validacfd.com))
 * Now supports encoding of more than 255 characters.
 * Now supports set the background color and color of the bar.
-Now supports setting the level of error correction recovery:
+* Now supports setting the level of error correction recovery:
   * Level L (Low): 7% of codewords can be restored.
   * Level M (Medium): 15% of codewords can be restored.
   * Level Q (Quartile): 25% of codewords can be restored.
