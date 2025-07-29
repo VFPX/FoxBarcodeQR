@@ -1,0 +1,52 @@
+What's New?
+
+v.2.25 - Release 2025.07.30
+Use QR Server API (requires internet connection)
+This API replaces the deprecated Google Charts API.
+This new API support:
+.Encoding of more than 255 characters.
+.Level of error correction recovery.
+.Image type: png, gif, jpeg, jpg, vector graphics svg and eps 
+.For more complete and detailed information, read the documentation for this API library at: https://goqr.me/api/doc/create-qr-code/
+
+v.2.21 - Release 2021.12.20
+Updated version QRCodeLib.dll v.1.2-Demo (visit: www.validacfd.com)
+Now supports setting the version of QR Code (1..40)
+
+v.2.10 - Release 2021.02.27  
+Use Google API (requires internet connection)
+This API support:
+.Encoding of more than 255 characters.
+.Level of error correction recovery.
+.Only PNG image type.
+
+v.2.00 - Release 2020.11.07
+Change external DLL library QRCodeLib.dll (visit: www.validacfd.com)
+Now supports encoding of more than 255 characters.
+Now supports set the background color and color of the bar.
+Now supports setting the level of error correction recovery:
+.Level L (Low): 7% of codewords can be restored.
+.Level M (Medium): 15% of codewords can be restored.
+.Level Q (Quartile): 25% of codewords can be restored.
+.Level H (High): 30% of codewords can be restored.
+Now supports the selection of the coding algorithm:
+.Numeric: encodes numeric values only (digits 0-9) 
+.Alphanumeric: encodes alphanumeric characters (digits 0-9; upper case letters A-Z; nine other characters: Space $ % * +   . / : ) 
+.Binary/byte: encodes binary values (8-bit data) 
+.Kanji/kana: encodes Kanji characters. Kanji characters in QR Code can have values 8140-9FFC and E040-EBBF
+.Auto: automatic seleccion of the encoding algorithm
+Only support BMP image type
+
+v.1.17 - Release 2016.12.21
+Version number matched to FoxBarcode an New Year !
+Fixed some minor bugs
+
+v.1.11 - Release 2013.08.24
+New property lDeleteTempFiles: Lets choose if delete or not the temporary folder and image files
+Version number matched to FoxBarcode
+Fixed some minor bugs
+
+v.1.00 - Release 2013.02.16
+Barcode Symbologies: QR code
+Image types: BMP, JPG and PNG
+External DLL library: BarCodeLibrary.dll (by Dario Alvarez Aranda, Mexico)
