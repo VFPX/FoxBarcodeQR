@@ -18,7 +18,7 @@ This class is a workaround for all developers requesting QR Code support with th
 
 ### Latest release
 
-**[FoxBarcodeQR_v_2_25](/FoxBarcodeQR_v_2_25/)** - v.2.25 - Release 2027.07.30
+**[FoxBarcodeQR_v_2_25](/FoxBarcodeQR_v_2_25/)** - v.2.25 - Release 2025.07.30
 
 ### Features of external libraries
 
@@ -38,29 +38,30 @@ The BarCodeLibrary.dll library contains only 3 functions:
 * ![](images/meth.gif) **SetConfiguration:** A method to set the size and type of image file to generate.
 * ![](images/meth.gif) **GenerateFile:** This method is responsible for generating the image of the QR Code.
 
-**QRCodeLib.dll** *(recommended) (Visit: [www.validacfd.com](http://www.validacfd.com))*
+**QRCodeLib.dll** *(Recommended) (Visit: [www.validacfd.com](http://www.validacfd.com))*
 
 * Generate functional QR codes with greater configuration control.
 * Supports strings of more than 255 characters.
 
-The BarCodeLib.dll library (version 0.1b) (Visit: [www.validacfd.com](http://www.validacfd.com)) contains the methods:
+The BarCodeLib.dll library (version 1.2-DEMO) contains the methods:
 
 * ![](images/meth.gif) **QRCodeLibVer:** Returns a string with the version of the library.
 * ![](images/meth.gif) **FastQRCode:** Generates the image of the QR Code with the text to be encoded.
 * ![](images/meth.gif) **FullQRCode:** Same as the previous method, but with greater control in the generation of the QR Code image.
 
-**Google API** *(Discontinued)*
+**Google API** *(DEPRECATED - DO NOT USE)*
 
 * Generates QR codes through a POST call to a URL, so it requires an internet connection
 * Supports strings of more than 255 characters.
 
-**QR Server API** *Coming soon*
+**QR Server API** *This API replaces the discontinued Google API.*
 
-*This API replaces the discontinued Google API.
+* Generates QR codes through a POST call to a URL, so it requires an internet connection
+* Supports strings of more than 255 characters.
 
 ### FoxBarcodeQR class methods
 
-**FoxBarcodeQR** encapsulates the functions of the **BarCodeLibrary.dll**, **QRCodeLib.dll** and **Google API** libraries in the class's own methods for compatibility with previous versions and to be able to select the library to use..
+**FoxBarcodeQR** encapsulates the functions of the **BarCodeLibrary.dll**, **QRCodeLib.dll**, **Google API** and **QR Server API** libraries in the class's own methods for compatibility with previous versions and to be able to select the library to use..
 
 The methods of the **FoxBarcodeQR** class are:
 
@@ -172,20 +173,27 @@ As of this new version 2.00 of **FoxBarcodeQR**, strings of characters greater t
 LOCAL loFbc, lcQRImage
 loFbc = CREATEOBJECT("FoxBarcodeQR")
 
-lcString = "+ .0010. -"
-DO WHILE LEN(lcString) < 500
-  lnI = LEN(lcString) + 10
-  lcString = lcString + "+ ." + TRANSFORM(lnI, "@L 9999") + ". -"
+m.lcString = ""
+m.lnI = 0
+DO WHILE LEN(m.lcString) < 512
+  m.lnI = m.lnI + 1
+  m.lcString = m.lcString + TRANSFORM(m.lnI) + ". - FoxbarcodeQR - "
 ENDDO
 
-*-- Using the QRCodeLib.dll library (Visit: www.validacfd.com)
+*-- Using the QRCodeLib.dll library)
 lcQRImage = loFbc.FullQRCodeImage(lcString,,330)
 
 *-- Using the QR Server API
 lcQRImage = loFbc.SvrQRCodeImage(lcString,,330)
 </pre>
 
-![](images/FullQRCodeImage500.png)   ![](images/SvrQRCodeImage.PNG)
+![](images/FullQRCodeImage500.png)  
+
+Image with FullQRCodeImage
+
+![](images/SvrQRCodeImage.PNG)
+
+Image with SvrQRCodeImage
 
 To include a barcode on a report, you must insert an Image object and set the property with a call ControlSource **QRBarcodeImage()** method and is recommended to set "contents Scale, Retain shape" if the image size differs from the frame.
 
@@ -211,7 +219,7 @@ The only files needed to be distributed to FoxBarcodeQR function properly are:
 
 The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They should both be in the same application folder or in the Windows System folder.
 
-**BarCodeLibrary.dll** and **QRCodeLib.dll** were tested and work on Windows XP, 7, 8 and 10 (32 and 64 bit)
+**BarCodeLibrary.dll** and **QRCodeLib.dll** were tested and work on Windows XP, 7, 8, 10 and 11 (32 and 64 bit)
 
 ### Acknowledgements
 
@@ -222,7 +230,7 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 
 ### What's New?
 
-**v.2.25 - Release 202.07.30**
+**v.2.25 - Release 2025.07.30**
 * Use QR Server API (requires internet connection)
 * This API replaces the discontinued Google API.
 * This new API support:
@@ -232,7 +240,7 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
   * For more complete and detailed information, read the documentation for this API library at: [goqr.me/api/doc/create-qr-code/](https://goqr.me/api/doc/create-qr-code/)
     
 **v.2.21 - Release 2021.12.04**
-* Updated version QRCodeLib.dll v.1.2.130915 Demo (Visit: [www.validacfd.com](http://www.validacfd.com))
+* Updated version QRCodeLib.dll v.1.2-Demo (Visit: [www.validacfd.com](http://www.validacfd.com))
 * Now supports setting the version of QR Code (1..40)
   
 **v.2.10 - Release 2021.02.27**
