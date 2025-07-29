@@ -49,14 +49,14 @@ The BarCodeLib.dll library (version 0.1b) (Visit: [www.validacfd.com](http://www
 * ![](images/meth.gif) **FastQRCode:** Generates the image of the QR Code with the text to be encoded.
 * ![](images/meth.gif) **FullQRCode:** Same as the previous method, but with greater control in the generation of the QR Code image.
 
-**Google API** *(Deprecated)*
+**Google API** *(Discontinued)*
 
 * Generates QR codes through a POST call to a URL, so it requires an internet connection
 * Supports strings of more than 255 characters.
 
-**QR Server API** 
+**QR Server API** *Coming soon*
 
-*This API replaces the deprecated Google API.
+*This API replaces the discontinued Google API.
 
 ### FoxBarcodeQR class methods
 
@@ -269,3 +269,4 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 * Barcode Symbologies: QR code
 * Image types: BMP, JPG and PNG
 * External dll library: BarCodeLibrary.dll
+  
