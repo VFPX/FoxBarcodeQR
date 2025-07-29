@@ -2,7 +2,11 @@
 
 **FoxBarcodeQR** is a supplement of **[FoxBarcode](https://github.com/VFPX/FoxBarCode)** class only for QR Code barcodes. 
 
-**FoxBarcodeQR** uses the **BarCodeLibrary.dll** libraries *(Darío Álvarez Aranda, Mexico)*, from version 2.00 of **FoxBarcodeQR** it uses **QRCodeLib.dll** *([www.validacfd.com](http://www.validacfd.com))* adding support to encode more than 255 characters and greater control in the generation of the QR code, and as of version 2.10 it uses the **Google API** (https://developers.google.com/chart/infographics/docs/qr_codes) to generate QR codes.
+**FoxBarcodeQR** uses the **BarCodeLibrary.dll** library *(by Darío Álvarez Aranda, Mexico)*.
+
+Since version 2.00, **FoxBarcodeQR** uses **QRCodeLib.dll** *([www.validacfd.com](http://www.validacfd.com))* adding support to encode more than 255 characters and greater control in the generation of the QR code.
+
+Version 2.25 now uses the QR Server API [goqr.me/api/doc/create-qr-code/](https://goqr.me/api/doc/create-qr-code/), which replaces the Google API (https://developers.google.com/chart/infographics/docs/qr_codes), as this library is obsolete for QR codes.
 
 You can choose by different methods which library to use.
 
@@ -14,7 +18,7 @@ This class is a workaround for all developers requesting QR Code support with th
 
 ### Latest release
 
-**[FoxBarcodeQR_v_2_10](/FoxBarcodeQR_v_2_10/)** - v.2.10 - Release 2021.02.27
+**[FoxBarcodeQR_v_2_25](/FoxBarcodeQR_v_2_25/)** - v.2.25 - Release 2027.07.30
 
 ### Features of external libraries
 
@@ -45,14 +49,14 @@ The BarCodeLib.dll library (version 0.1b) (Visit: [www.validacfd.com](http://www
 * ![](images/meth.gif) **FastQRCode:** Generates the image of the QR Code with the text to be encoded.
 * ![](images/meth.gif) **FullQRCode:** Same as the previous method, but with greater control in the generation of the QR Code image.
 
-**Google API** *(Discontinued)*
+**Google API** *(Deprecated)*
 
 * Generates QR codes through a POST call to a URL, so it requires an internet connection
 * Supports strings of more than 255 characters.
 
-**QR Server API** *Coming soon*
+**QR Server API** 
 
-*This API replaces the discontinued Google API.
+*This API replaces the deprecated Google API.
 
 ### FoxBarcodeQR class methods
 
@@ -118,7 +122,7 @@ The following properties are used to configure the other options:
 
 As of version 2.10 of **FoxBarcodeQR** a new method was added that uses the **Google API**:
 
-**GooQRCodeImage()** receives the same parameters as the previous methods to standardize the class:
+**GooQRCodeImage()** *DEPRECATED - DO NOT USE* receives the same parameters as the previous methods to standardize the class:
 * **tcText:** Text to encode
 * **tcFile:** Name of the image file you want to generate. If none is specified, a random file name is generated in the Windows temporary files folder.
 * **tnSize:** The width and height in pixels of the generated image
@@ -133,7 +137,7 @@ This API allows us to adjust some other properties such as:
   * 3 = Level H (30%)
 * **nMarginPixels:** Margin in columns
 
-**SvrQRCodeImage()** *Coming soon*
+**SvrQRCodeImage()** receives the same parameters as the previous methods to standardize the class:
 * **tcText:** Text to encode
 * **tcFile:** Name of the image file you want to generate. If none is specified, a random file name is generated in the Windows temporary files folder.
 * **tnSize:** The width and height in pixels of the generated image
@@ -161,7 +165,7 @@ lcQRImage2 = loFbc.FullQRCodeImage("https://github.com/VFPX/FoxBarcodeQR",,198,0
 
 ![](images/QRBarcodeImage1.png)    ![](images/FullQRCodeImage1.png)
 
-As of this new version 2.00 of **FoxBarcodeQR**, strings of characters greater than 255 characters can be encoded with the **QRCodeLib.dll** library and the **Google API**. Example:
+As of this new version 2.00 of **FoxBarcodeQR**, strings of characters greater than 255 characters can be encoded with the **QRCodeLib.dll** library and the **QR Server API**. Example:
 
 <pre>SET PROCEDURE TO LOCFILE("FoxBarcodeQR.prg") ADITIVE
 *--- Create a FoxBarcodeQR object
@@ -177,11 +181,11 @@ ENDDO
 *-- Using the QRCodeLib.dll library (Visit: www.validacfd.com)
 lcQRImage = loFbc.FullQRCodeImage(lcString,,330)
 
-*-- Using the Google API
-lcQRImage = loFbc.GooQRCodeImage(lcString,,330)
+*-- Using the QR Server API
+lcQRImage = loFbc.SvrQRCodeImage(lcString,,330)
 </pre>
 
-![](images/FullQRCodeImage500.png)   ![](images/GooQRCodeImage.PNG)
+![](images/FullQRCodeImage500.png)   ![](images/SvrQRCodeImage.PNG)
 
 To include a barcode on a report, you must insert an Image object and set the property with a call ControlSource **QRBarcodeImage()** method and is recommended to set "contents Scale, Retain shape" if the image size differs from the frame.
 
@@ -218,7 +222,7 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 
 ### What's New?
 
-**v.2.25 - Release soon**
+**v.2.25 - Release 202.07.30**
 * Use QR Server API (requires internet connection)
 * This API replaces the discontinued Google API.
 * This new API support:
@@ -227,8 +231,8 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
   * Image type: png, gif, jpeg, jpg, vector graphics svg and eps 
   * For more complete and detailed information, read the documentation for this API library at: [goqr.me/api/doc/create-qr-code/](https://goqr.me/api/doc/create-qr-code/)
     
-**v.2.21 - Release 2021.01.04**
-* Updated version QRCodeLib.dll v.1.2.130915 Demo (visit: www.validacfd.com)
+**v.2.21 - Release 2021.12.04**
+* Updated version QRCodeLib.dll v.1.2.130915 Demo (Visit: [www.validacfd.com](http://www.validacfd.com))
 * Now supports setting the version of QR Code (1..40)
   
 **v.2.10 - Release 2021.02.27**
@@ -265,4 +269,3 @@ The **BarCodeLibrary.dll** and **QRCodeLib.dll** files are not registered. They 
 * Barcode Symbologies: QR code
 * Image types: BMP, JPG and PNG
 * External dll library: BarCodeLibrary.dll
-
